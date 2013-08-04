@@ -3,7 +3,10 @@ use strict;
 
 sub print_footer() {
 	print <<EOF;
-		</section><!-- /.content -->
+					</section><!-- /.content -->
+				</div><!-- /.span6.offset3 -->
+			</div><!-- /.row -->
+		</div><!-- /.container -->
 		<footer id="footer" class="text-center">
 			<p class="text-info">
 				<small>Copyright &copy; 2012 <a class="text-info" href="http://www.lizcheney.com">Elizabeth Cheney</a> and <a class="text-info" href="http://www.merenbach.com">Andrew Merenbach</a></small>
