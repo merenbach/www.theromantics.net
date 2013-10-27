@@ -1,15 +1,7 @@
-#!/usr/bin/perl
-
-use strict;
-
-require 'cgi-bin/header.cgi';
-require 'cgi-bin/footer.cgi';
-
-# Header
-print_header('our-story');
-
-# Content
-print <<EOF;
+{% extends "_layout.html" %}
+{% set slug = "our-story" %}
+{% set title = "Our Story" %}
+{% block body %}
 	<img class="pull-left span2 hidden-phone" src="/img/JaneAustenSilhouette.png" alt="Jane Austen">
 	<article class="book-page">
 		<p>The story of how our hero met our heroine does not begin, I am sorry to say, with any cases of kidnapping or intrigue or any other such staples of a traditional romance. This young couple met, prosaically enough, as college freshmen in the summer of 2004. They met through sheer chance, having distanced themselves from the weary bustle of orientation activities. They spoke of their family backgrounds and of their plans for the future, the former as respectable as the latter.</p>
@@ -17,8 +9,4 @@ print <<EOF;
 		<p>Dear reader, their courtship was not marked by discoveries of ancient animosity between their two lines. During the ensuing five and a half years, no spurned fianc&eacute;s appeared to mar their happiness, nor did any political upheavals conspire to separate the young pair. Rather, the couple grew together as they established themselves in their respective spheres of web development and librarianship.</p>
 		<p>To the delight and relief of their connections, they have made the decision to wed May of 2013 in <abbr title="Culver City, California">&#8212;shire</abbr>. They look forward to celebrating this occasion with family and friends in an intimate ceremony free of hysterics or scandal but full of affection and felicity.</p>
 	</article>
-EOF
-
-# Footer
-print_footer();
-
+{% endblock %}

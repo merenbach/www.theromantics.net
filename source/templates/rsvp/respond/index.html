@@ -1,13 +1,7 @@
-#!/usr/bin/perl
-
-use strict;
-
-require '../../cgi-bin/header.cgi';
-require '../../cgi-bin/footer.cgi';
-
-print_header('rsvp');
-
-print <<EOF;
+{% extends "_layout.html" %}
+{% set slug = "rsvp" %}
+{% set title = "RSVP" %}
+{% block body %}
 	<div class="box">
 		<div class="row-fluid">
 			<div class="span10 offset1">
@@ -27,6 +21,4 @@ print <<EOF;
 			</div> 
 		</div> 
 	</div>
-EOF
-
-print_footer();
+{% endblock %}
